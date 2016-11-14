@@ -3,6 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
+	function __construct() {
+		parent::__construct();
+		$this->load->model('AdminModel');
+	}
 	/**
 	 * Index Page for this controller.
 	 *
@@ -35,7 +39,36 @@ class Admin extends CI_Controller {
 
 	public function index() 									//main page function
 	{
-		$this->render('');
+
+		$data = array(
+			'user' => $this->input->post('name'),
+			'profession' => $this->input->post('profession'),
+			'birth' => $this->input->post('birth'),
+			'address' => $this->input->post('address'),
+			'phone' => $this->input->post('phone'),
+			'email' => $this->input->post('email'),
+			'info' => $this->input->post('info')
+		);
+
+		if($data='')
+		{
+			$this->render('main');										//loading view
+
+			echo "data is null";
+
+		}
+		else
+		{
+			$this->render('main');
+		}
+
+		// {
+		// 	$this->Admin->InsertData($data);						//Transfering data to Model
+		// 	$this->render('');										//loading view
+		// }
+
+												
+
 	}
 
 	public function experience() 								//experience function
