@@ -1,0 +1,508 @@
+@import "fonts";
+@import "normalize";
+@import "variables";
+@import "plugins/aos";
+@import "../css/build/libs/font-awesome.min";
+@import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon";
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(68, 68, 68, 0.81);
+    display: none;
+    z-index: 1;
+}
+
+.bg.active {
+    display: block;
+}
+
+.menu-ul-mobile {
+    position: fixed;
+    z-index: 100;
+    top: 100px;
+    width: 100%;
+    display: none;
+    text-align: center;
+    font-family: $montserat;
+    text-transform: uppercase;
+    a {
+        color: #ffffff;
+        font-size: 26px;
+        padding: 15px 0;
+        display: block;
+    }
+}
+
+.menu-ul-mobile.active {
+    display: block;
+}
+
+.main {
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background: url(assets/img/pattern.png) rgba(56, 56, 56, 0.74);
+    fieldset {
+        position: relative;
+        display: inline-block;
+        border: 1px solid #ffffff;
+        top: 350px;
+        padding: 0 50px;
+    }
+    legend {
+        color: #ffffff;
+        font-family: $title;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 12px;
+        padding: 0 20px;
+    }
+    h1 {
+        color: #ffffff;
+        font-family: $montserat;
+        text-transform: uppercase;
+        display: inline-block;
+        font-weight: normal;
+        letter-spacing: 2px;
+        margin: 6px 0 15px;
+        font-size: 45px;
+        text-shadow: 1px 1px 3px #171717;
+    }
+}
+
+.menu {
+    border-bottom: 1px solid #e4e4e4;
+    height: 50px;
+    background: #ffffff;
+    @include transition(all 0.3s);
+    .logo {
+        float: left;
+        background: #444444;
+        color: #ffffff;
+        font-family: $montserat;
+        text-transform: uppercase;
+        height: 50px;
+        padding: 8px 25px;
+        font-size: 25px;
+        font-weight: 300;
+        letter-spacing: 3px;
+    }
+    ul {
+        float: right;
+    }
+    li {
+        display: inline-block;
+        a {
+            @include transition(all 0.2s);
+            font-family: $paragraph;
+            color: #444444;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            height: 50px;
+            display: block;
+            padding: 17px 20px;
+            font-size: 14px;
+        }
+        a:hover {
+            background: #444444;
+            color: #ffffff;
+        }
+    }
+}
+
+.menu-button {
+    width: 50px;
+    height: 50px;
+    float: right;
+    text-align: center;
+    background: #444444;
+    font-size: 24px;
+    color: #ffffff;
+    display: none;
+    padding: 12px 0 0 0;
+}
+
+.menu-button.fixed {
+    color: #444444;
+    background: #ffffff;
+    border-bottom: 1px solid #444444;
+}
+
+.menu.fixed {
+    @include transition(all 0.3s);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background: #444444;
+    border-bottom: 1px solid #444444;
+    .logo {
+        color: #444444;
+        background: #ffffff;
+        border-bottom: 1px solid #444444;
+    }
+    li {
+        a {
+            color: #ffffff;
+            border-bottom: 1px solid #444444;
+        }
+        a:hover {
+            background: #ffffff;
+            color: #444444;
+        }
+    }
+}
+
+section {
+    padding: 100px 0;
+}
+
+.container {
+    @include clearfix;
+    margin: auto;
+    width: 1170px;
+}
+
+.section-center-row {
+    text-align: center;
+}
+
+.section-name {
+    text-align: center;
+    margin: 0 0 100px;
+    display: inline-block;
+    color: #444444;
+    border: 1px solid #444444;
+    legend {
+        text-transform: uppercase;
+        font-family: $title;
+        font-size: 12px;
+        padding: 0 15px;
+    }
+    h1 {
+        margin: 0;
+        font-family: $title;
+        font-weight: normal;
+        padding: 0 15px;
+        letter-spacing: 2px;
+    }
+}
+
+.personal-details-row {
+    @include clearfix;
+    margin: 50px 0 70px;
+    img {
+        float: left;
+        width: 45%;
+    }
+    ul {
+        float: left;
+        width: 55%;
+        padding: 0 0 0 15px;
+        color: #444444;
+    }
+    li {
+        font-family: $title;
+        padding: 11px 0;
+        font-size: 14px;
+        border-bottom: 1px solid #eee;
+    }
+    li:last-child {
+        border-bottom: none;
+    }
+    strong {
+        font-family: $montserat;
+        font-weight: 600;
+    }
+    .personal-profile-col {
+        color: #444444;
+        h1 {
+            margin: 0;
+            font-family: $title;
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+    }
+    p {
+        font-family: $paragraph;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}
+
+.year {
+    color: #444444;
+    float: left;
+    width: 30%;
+    font-family: $title;
+    text-align: right;
+    padding: 0 15px 0 0;
+    .large-years {
+        display: inline-block;
+        margin: 10px 0;
+        position: relative;
+        span {
+            position: absolute;
+            font-size: 12px;
+            top: -8px;
+            left: 0;
+        }
+        div {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 34px;
+        }
+    }
+    .from {
+        position: relative;
+    }
+    .company {
+        text-transform: uppercase;
+    }
+}
+
+.description {
+    border-left: 1px solid #e1e1e1;
+    float: left;
+    width: 70%;
+    padding: 0 15px;
+    h3 {
+        font-family: $paragraph;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 20px 0;
+    }
+    p {
+        font-family: $paragraph;
+        font-size: 14px;
+    }
+}
+
+.experience-row {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0 0 45px 0;
+    margin: 0 0 45px 0;
+}
+
+.percent-row {
+    margin: 15px 0;
+}
+
+.programming-languages {
+    font-family: $montserat;
+    padding: 0 85px 0 15px;
+    width: 65%;
+    float: left;
+    h3 {
+        margin: 45px 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: normal;
+        font-size: 28px;
+    }
+    .square-container {
+        text-align: center;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0 45px 0 0;
+    }
+    .square {
+        width: 80px;
+        height: 80px;
+        border: 1px solid #252525;
+        padding: 25px 0 0 0;
+        font-size: 22px;
+    }
+    .circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        border: 7px solid #252525;
+        text-align: center;
+        font-size: 44px;
+        display: inline-block;
+        margin: 0 65px 0 0;
+        padding: 45px 0 0;
+        color: #252525;
+        @include transition(all 0.2s);
+    }
+    .circle:hover {
+        background: #252525;
+        color: #ffffff;
+        border-color: #252525;
+    }
+    .percentage-container {
+        background: #5f5f5f;
+        width: 100%;
+        height: 10px;
+    }
+    .percentage-name {
+        padding: 11px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .percent {
+        font-family: $paragraph;
+        position: relative;
+        height: 10px;
+        background: #252525;
+        font-size: 14px;
+    }
+    .percent::after {
+        position: absolute;
+        content: attr(data-percent);
+        right: -20px;
+        top: -30px;
+        color: #fff;
+        text-align: center;
+        background: #252525;
+        width: 40px;
+        height: 25px;
+        padding: 5px 0 0 0;
+        box-sizing: border-box;
+    }
+    .percent::before {
+        position: absolute;
+        content: "";
+        right: -4px;
+        top: -8px;
+        background: #252525;
+        width: 5px;
+        height: 5px;
+        z-index: 1;
+        @include transform(rotate(45deg));
+    }
+}
+
+.plugins-container {
+    font-family: $montserat;
+    padding: 0 15px;
+    width: 35%;
+    float: left;
+    @include clearfix;
+    h3 {
+        margin: 45px 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: normal;
+        font-size: 28px;
+    }
+    .plugins-list,
+    .knowledge-list {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        float: left;
+        width: 50%;
+        font-family: $paragraph;
+        padding: 27px 0 0 0;
+        li {
+            padding: 10px 0 11px 0;
+            font-size: 14px;
+        }
+        .fa {
+            color: #5f5f5f;
+            font-size: 11px;
+            position: relative;
+            top: -1px;
+        }
+    }
+    .knowledge-list {
+        width: 100%;
+        padding: 0;
+        li {
+            font-size: 12px;
+        }
+    }
+}
+
+.portfolio-row {
+    .col-3 {
+        position: relative;
+        width: 33.33%;
+        float: left;
+        padding: 15px;
+    }
+    .image-container {
+        margin: 0;
+        img {
+            width: 100%;
+        }
+    }
+    .tech-container {
+        opacity: 0;
+        @include transition(all 0.4s);
+        width: 100%;
+        height: 100%;
+        background: rgba(68, 68, 68, 0.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        border: 1px solid #444444;
+    }
+    .tech-container:hover {
+        opacity: 1;
+    }
+    .what-i-do {
+        font-family: $title;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 23px;
+        padding: 0 20px;
+        text-shadow: 2px 3px 5px #000;
+        margin: 140px 0 0 0;
+        display: inline-block;
+    }
+    .icons-container {
+        background: #f6f6f6;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 30%;
+        left: 0;
+        font-size: 38px;
+        color: #444444;
+        padding: 25px;
+        div {
+            font-size: 14px;
+            font-family: $title;
+            text-transform: uppercase;
+            padding: 0 0 12px 0;
+        }
+        i {
+            margin: 0 10px;
+        }
+    }
+}
+
+#personal-detail.margin {
+    margin: 51px 0 0 0;
+}
+
+footer {
+    padding: 100px;
+    background: #444;
+    margin: 70px 0 0 0;
+    text-align: center;
+    .hire {
+        font-family: $title;
+        text-transform: uppercase;
+    }
+    a {
+        color: #ffffff;
+        font-size: 34px;
+        padding: 0 15px;
+    }
+    li {
+        display: inline-block;
+    }
+}
+
+@import "media-queyries";

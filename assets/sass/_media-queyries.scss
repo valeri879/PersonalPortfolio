@@ -1,0 +1,121 @@
+@media only screen and (min-width: 240px) and (max-width: 1187px) {
+    .container {
+        width: 800px;
+    }
+    .programming-languages .circle {
+        margin: 0 15px 0 0;
+        width: 120px;
+        height: 120px;
+        padding: 28px 0 0;
+    }
+    .portfolio-row .what-i-do {
+        margin: 70px 0 0;
+    }
+    .portfolio-row .icons-container {
+        font-size: 14px;
+        padding: 16px;
+    }
+}
+
+@media only screen and (min-width: 240px) and (max-width: 830px) {
+    .container {
+        width: 100%;
+    }
+    .col-2 {
+        width: 100%;
+    }
+    .year {
+        width: 240px;
+        text-align: center;
+        float: none;
+        margin: auto;
+        display: block;
+        padding: 0;
+    }
+    .description {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    .description h3 {
+        text-align: center;
+    }
+    .programming-languages h3,
+    .plugins-container h3 {
+        text-align: center;
+    }
+    .programming-languages,
+    .plugins-container {
+        width: 100%;
+        float: none;
+        padding: 0 55px;
+    }
+    .center {
+        text-align: center;
+    }
+    .plugins-list li,
+    .knowledge-list li {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 240px) and (max-width: 829px) {
+    .menu-ul {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+    .personal-details-row {
+        text-align: center;
+        margin: 0;
+    }
+    .personal-details-row img {
+        float: none;
+        width: 50%;
+    }
+    .personal-details-row ul {
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin: 30px 0;
+    }
+    .main h1 {
+        font-size: 18px;
+    }
+    .main fieldset {
+        top: 110px;
+    }
+    .description p {
+        text-align: center;
+    }
+    .plugins-container .knowledge-list li,
+    .plugins-container .plugins-list li {
+        padding: 15px 10px;
+    }
+    .programming-languages .circle {
+        margin: 15px;
+    }
+    .programming-languages .square-container {
+        margin: 0 15px;
+    }
+    .portfolio-row .col-3 {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 240px) and (max-width: 600px) {
+    .portfolio-row {
+        text-align: center;
+    }
+    .portfolio-row .col-3 {
+        width: 70%;
+        display: block;
+        float: none;
+        margin: auto;
+    }
+    footer li {
+        display: block;
+        margin: 5px 0;
+    }
+}

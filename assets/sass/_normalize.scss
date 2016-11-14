@@ -1,0 +1,99 @@
+@import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+::selection {
+  background: #333333; /* WebKit/Blink Browsers */
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: #333333; /* Gecko Browsers */
+  color: #ffffff;
+}
+
+/////////////////////////////
+//input placeholder colors
+//////////////////////////////////////
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: #444;
+}
+
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #444;
+  opacity: 1;
+}
+
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #444;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #444;
+}
+
+input:focus::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: #fff;
+}
+
+input:focus::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+  opacity: 1;
+}
+
+input:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #fff;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder:focus { /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+.grey {
+  background: #f6f6f6;
+}
+
+.row {
+  @include clearfix;
+}
+
+.col-2 {
+  @include clearfix;
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
