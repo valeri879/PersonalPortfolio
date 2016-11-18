@@ -24,7 +24,6 @@ class Admin extends CI_Controller {
 
 	public function index() 									//main page function
 	{
-
 		$UserPost = array(
 			'user' 			=> $this->input->post('name'),
 			'profession' 	=> $this->input->post('profession'),
