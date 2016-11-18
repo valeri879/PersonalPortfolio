@@ -53,6 +53,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function experience() 								//experience function...
+
 	{
 		$this->render('experience');
 	}
