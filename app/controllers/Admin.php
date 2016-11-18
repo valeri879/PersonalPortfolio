@@ -52,7 +52,8 @@ class Admin extends CI_Controller {
 		}
 	}
 
-	public function experience() 								//experience function___
+	public function experience() 								//experience function...
+
 	{
 		$this->render('experience');
 	}
