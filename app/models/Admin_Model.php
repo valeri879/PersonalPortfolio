@@ -7,17 +7,54 @@ class Admin_Model extends CI_Model {
                 parent::__construct();
         }
 
-        public function InsertData($data=false)
+        public function InsertData($data)
         {
-                if($this->db->insert('user', $data)){
-                        return $this->GetUserData($this->db->insert_id());
-                }
-                return FALSE;
+                $this->db->insert('user', $data);                //insert data 
         }
 
-        public function GetUserData($userID=false)
+        public function GetUserInfo()
         {
-                $this->db->where('id',$userID);
-                return $this->db->get('user')->result_array();
+                $data   = array();
+                $result  = $this->db->get('user')->result_array();
+                return $result;
+        }
+
+        public function UpdateUser($data)
+        {
+                $this->db->where('id', $data['UserId']);
+
+                unset($data['UserId']);
+
+                if($this->db->update('user', $data)){
+                        return true;
+                }
+                return false;
+        }
+
+
+        //////////////////////////////////////////////////
+        // education
+        //////////////////////////////////////////////////
+        public function InsertEducation($data)
+        {
+               $this->db->insert('education', $data);
+        }
+        public function GetEdication()
+        {
+                $data   = array();
+                $result  = $this->db->get('education')->result_array();
+                return $result;
+        }
+
+        public function UpdateEducation($data)
+        {
+                $this->db->where('id', $data['UserId']);
+
+                unset($data['UserId']);
+
+                if($this->db->update('education', $data)){
+                        return true;
+                }
+                return false;
         }
 } 
